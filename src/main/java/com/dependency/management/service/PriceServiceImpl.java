@@ -14,4 +14,22 @@ public class PriceServiceImpl implements PriceService{
         System.out.print("result :: "+result);
         return result;
     }
+
+    @Override
+    public String fetchWeeklyPrice() {
+        restTemplate = new RestTemplate();
+        String uri = "https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=TCS.BSE&apikey=NO1TIEL2R260NYT6.";
+        String result = restTemplate.getForObject(uri,String.class);
+        System.out.print("result :: "+result);
+        return result;
+    }
+
+    @Override
+    public String fetchMonthlyPrice() {
+        restTemplate = new RestTemplate();
+        String uri = "https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=TCS.BSE&apikey=NO1TIEL2R260NYT6.";
+        String result = restTemplate.getForObject(uri,String.class);
+        System.out.print("result :: "+result);
+        return result;
+    }
 }

@@ -5,4 +5,8 @@ import org.springframework.stereotype.Service;
 @Component
 public interface PriceService {
      String fetchIntradayPrice();
+
+     String fetchWeeklyPrice();
+
+     String fetchMonthlyPrice();
 }

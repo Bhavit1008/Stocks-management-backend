@@ -12,13 +12,21 @@ public class PriceController {
     @Autowired
     PriceService priceService;
     //Intraday call
-    @GetMapping("/intraday")
+    @GetMapping("/daily")
     public String intradayPrice(){
         String result = priceService.fetchIntradayPrice();
         return result;
     }
     //weekly call
-
+    @GetMapping("/weekly")
+    public String weeklyPrice(){
+        String result = priceService.fetchWeeklyPrice();
+        return result;
+    }
     //monthly call
-
+    @GetMapping("/monthly")
+    public String monthlyPrice(){
+        String result = priceService.fetchMonthlyPrice();
+        return result;
+    }
 }
