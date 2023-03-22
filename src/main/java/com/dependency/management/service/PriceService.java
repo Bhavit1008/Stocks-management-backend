@@ -1,4 +1,8 @@
 package com.dependency.management.service;
 
-public class PriceService {
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+@Component
+public interface PriceService {
+     String fetchIntradayPrice();
 }
